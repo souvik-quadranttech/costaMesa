@@ -1,0 +1,253 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(./assets/fonts/fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;'
+  box-sizing: border-box;
+  font-family: "Helvetica", sans-serif;
+}
+
+:root {
+    --nav-container: 0 10%;
+    --container: 0 15%;
+    --col-6: 50%;
+    --libre: "Libre Bodoni", serif;
+    --h2: 44px;
+    --para-sm: 16px;
+
+    --dark: #033D5A;
+}
+
+html{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container .col-6{
+    width: var(--col-6);
+    height: 100%;
+}
+
+.btn{
+    padding: 13px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-light{
+    background-color: #fff;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    transition: .5s ease;
+}
+
+
+nav.navbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50px;
+    z-index: 100;
+    background-color: transparent;
+    position: fixed
+}
+
+nav.navbar .container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-container);
+}
+
+nav.navbar .container .col-6:last-child{
+    width: var(--col-6);
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav.navbar .container .col-6:last-child .location{
+    width: var(--col-6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 64px;
+}
+
+section.hero{
+    background-color: #444AD2;
+    height: 760px;
+    width: 100vw;
+    position: relative;
+    z-index: 10;
+}
+
+.hero .personBg{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+}
+
+section.hero::before{
+    content: '';
+    width: 684px;
+    height: 492px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #4DACEF;
+    mix-blend-mode: hard-light;
+    filter: blur(140px);
+    transform: rotate(300deg);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+section.hero::after{
+    content: '';
+    width: 684px;
+    height: 492px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #835FEB;
+    filter: blur(140px);
+    border-radius: 50%;
+    transform: rotate(126deg);
+    z-index: -1;
+}
+
+.hero .container{
+    padding: var(--container);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .container .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero .container .herohead{
+    font-size: var(--h2);
+    line-height: 140%;
+    color: white;
+    font-weight: 400;
+    margin-bottom: 32px;
+    width: 82%;
+}
+
+.hero .container .herohead .libra{
+    font-size: var(--h2);
+    line-height: 140%;
+    color: white;
+    font-weight: 400;
+    font-family: var(--libre);
+    font-style: italic;
+}
+
+.hero .container .herohead .hrBottom{
+    position: relative;
+    text-transform: uppercase
+}
+
+.hrBottom::before {
+    content: '';
+    width: 652px;
+    height: 419px;
+    position: absolute;
+    top: 0;
+    left: 135px;
+    background-color: #4DACEF;
+    mix-blend-mode: hard-light;
+    filter: blur(100px);
+    transform: rotate(300deg);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hrBottom::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 95%;
+    height: 6px;
+    background-color: #F6DE04;
+    border-radius: 50px;
+    transform: rotate(1deg);
+    animation: .5s draw linear forwards;
+    opacity: 1;
+}
+
+@keyframes draw {
+    0%{
+        opacity: 0;
+        width: 0;
+    }
+    100%{
+        opacity: 1;
+        width: 100%;
+    }
+    
+}
+
+.left .para-sm{
+    font-size: var(--para-sm);
+    color: #fff;
+    width: 60%;
+    margin-bottom: 60px;
+    font-weight: 400;
+    line-height: 180%;
+}
+
+.left .btn-light{
+    font-size: var(--para-sm);
+    font-weight: 700;
+    color: var(--dark);
+    cursor: pointer;
+}
+.left .btn-light:hover{
+    background-color: #033D5A;
+    color: #fff;
+}
+
+.left .btn-light .calendar-icon{
+    background-image: url(./assets/icon/calendar.svg);
+    transition: .5s ease;
+}
+.left .btn-light:hover .calendar-icon{
+    background-image: url(./assets/icon/calendar-light.svg)
+}
+.left .btn-light .icon{
+    margin-left: 20px;
+    width: 24px;
+    height: 24px;
+}
+
+.right{
+    position: relative;
+}
+
+.right .rightImage{
+    width: 500px;
+    height: 680px;
+    object-fit: contain;
+    position: absolute;
+    bottom: -100px;
+    right: 0;
+    z-index: 100;
+}
