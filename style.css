@@ -25,6 +25,7 @@
   --para: 16px;
   --para-sm: 16px;
   --section: 80px;
+  --gap: 60px;
   /* color */
   --dark: #033d5a;
   --blue: #224ce0;
@@ -585,7 +586,7 @@ body {
 
 .reviews .marquee .body .body-name {
   color: #033d5a;
-  font-size: 16px;
+  font-size: var(--para);
   font-weight: 700;
   line-height: 180%;
   text-transform: capitalize;
@@ -593,7 +594,7 @@ body {
 
 .reviews .marquee .body .para {
   color: #033d5a;
-  font-size: 16px;
+  font-size: var(--para);
   font-weight: 400;
   line-height: 180%;
   margin-right: 5px;
@@ -606,6 +607,7 @@ body {
   height: 16px;
   background-size: contain;
   background-repeat: no-repeat;
+  margin-left: 20px;
 }
 
 /* hospital */
@@ -1300,7 +1302,7 @@ body {
 .faq .right .para {
   color: #033D5A;
   font-family: var(--hel);
-  font-size: 16px;
+  font-size: var(--para);
   font-weight: 400;
   line-height: 180%;
   margin-bottom: 28px;
@@ -2031,6 +2033,17 @@ body {
     --h2: 26px;
   }
 
+  .about .container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 80%;
+    background: linear-gradient(to bottom, #4dacef, rgba(77, 172, 239, 0));
+    border-top-left-radius: 100%;
+  }
+
   .footer .container .bottom .left {
     display: flex;
     justify-content: flex-start;
@@ -2220,7 +2233,7 @@ body {
 
   .faq .right {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     gap: 30px;
@@ -2265,6 +2278,16 @@ body {
 
   .navbar .container .col-6 .location {
     width: 100%;
+  }
+
+  .reviews .h-Bar ul li .quote-icon {
+    background-image: url("./assets/icon/qoute.svg");
+    color: #033d5a;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 10px;
   }
 
   .navbar .container .col-6 {
@@ -2396,18 +2419,57 @@ body {
     --nav-container: 0 8%;
     --container: 0 10%;
     --col-6: 100%;
-    --h2: 25px;
+    --h2: 28px;
     --head: 28px;
     --para: 14px;
     --para-sm: 14px;
-    --section: 60px;
+    --section: 40px;
+  }
+
+  .reviews .marquee .testi-logo {
+    width: 40px;
+    height: 40px;
   }
 
   .hero .container {
     margin-top: 100px;
   }
 
+  .fecility-sec {
+    padding-top: 0;
+    margin-top: var(--section);
+  }
+
   .navbar .container .col-6 .number .callBtn {
     font-size: 18px;
+  }
+
+  .hero .left .para-sm {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+
+  .fecility-sec .right .para {
+    margin-bottom: 30px;
+  }
+
+  .icon-mid {
+    width: 22px;
+    height: 22px;
+  }
+
+  .reviews .reviews-card .star {
+    margin: 0 5px 0 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  .reviews .top {
+    margin-bottom: 20px;
+  }
+
+  .about .container {
+    gap: 40px;
+    flex-direction: column-reverse;
   }
 }
