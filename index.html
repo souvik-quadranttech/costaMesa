@@ -391,10 +391,10 @@
             <h2 class="head">You ask, We answer</h2>
             <div class="accordionWrapper">
               <div class="accordionItem open">
-                <h2 class="acc-head">
+                <button class="acc-head">
                   What is a 3T MRI ?
                   <span class="icon toggle-icon"></span>
-                </h2>
+                </button>
                 <div class="accordionItemContent">
                   <p>
                     The 3T MRI machine offers higher resolution images,
@@ -405,10 +405,10 @@
               </div>
 
               <div class="accordionItem close">
-                <h2 class="acc-head">
+                <button class="acc-head">
                   How Does a 3T MRI works ?
                   <span class="icon toggle-icon"></span>
-                </h2>
+                </button>
                 <div class="accordionItemContent">
                   <p>
                     The 3T MRI machine offers higher resolution images,
@@ -419,10 +419,10 @@
               </div>
 
               <div class="accordionItem close">
-                <h2 class="acc-head">
+                <button class="acc-head">
                   What is a 3T MRI ?
                   <span class="icon toggle-icon"></span>
-                </h2>
+                </button>
                 <div class="accordionItemContent">
                   <p>
                     The 3T MRI machine offers higher resolution images,
@@ -432,10 +432,10 @@
                 </div>
               </div>
               <div class="accordionItem close">
-                <h2 class="acc-head">
+                <button class="acc-head">
                   Is MRI safe during pregnancy?
                   <span class="icon toggle-icon"></span>
-                </h2>
+                </button>
                 <div class="accordionItemContent">
                   <p>
                     The 3T MRI machine offers higher resolution images,
@@ -445,10 +445,10 @@
                 </div>
               </div>
               <div class="accordionItem close">
-                <h2 class="acc-head">
+                <button class="acc-head">
                   Is there any side effects after MRI scan?
                   <span class="icon toggle-icon"></span>
-                </h2>
+                </button>
                 <div class="accordionItemContent">
                   <p>
                     The 3T MRI machine offers higher resolution images,
@@ -560,11 +560,11 @@
       var liEle = [];
       var liEle = $(".marquee-item-list li");
 
-      // paralax
-      const parallax = document.getElementById("parallax");
-      window.addEventListener("scroll", function () {
-        let offset = window.pageYOffset;
-        let demo = (parallax.style.backgroundPositionY = -offset * 0.5 + "px");
+      //buttons
+      document.querySelectorAll("button").forEach((button) => {
+        button.addEventListener("click", function () {
+          this.blur();
+        });
       });
 
       // accordion

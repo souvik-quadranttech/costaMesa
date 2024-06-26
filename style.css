@@ -96,7 +96,6 @@ body {
 }
 
 .icon {
-  margin-left: 20px;
   width: 24px;
   height: 24px;
 }
@@ -423,6 +422,7 @@ body {
 .btn-blue .calendar-icon {
   background-image: url(./assets/icon/calendar.svg);
   transition: 0.5s ease;
+  margin-left: 20px;
   filter: brightness(0) saturate(100%) invert(100%) sepia(1%) saturate(136%) hue-rotate(62deg) brightness(112%) contrast(100%);
 }
 
@@ -1153,8 +1153,17 @@ body {
   display: block;
   width: 100%;
   box-sizing: border-box;
-  font-family: 'Open-sans', Arial, sans-serif;
-  margin-top: 20px;
+}
+
+.faq .accordionItem.close {
+  margin-top: 40px;
+  border-bottom: 1px solid var(--border-secondary);
+}
+
+.faq .accordionItem.open {
+  margin-top: 0px;
+  padding-top: 40px;
+  border-bottom: 1px solid transparent;
 }
 
 .faq .accordionItem .acc-head:focus,
@@ -1165,6 +1174,8 @@ body {
 }
 
 .faq .acc-head {
+  background-color: #fff;
+  border: transparent;
   cursor: pointer;
   color: #033D5A;
   font-family: var(--hel);
@@ -1176,38 +1187,11 @@ body {
   display: flex;
   justify-content: space-between;
   padding-bottom: 32px;
-  border-bottom: 2px solid var(--border-secondary);
+  transition: border .5s ease;
+  user-select: none;
 }
 
-.faq .close .accordionItemContent p {
-  height: 0;
-  float: left;
-  display: block;
-  transition: .5s ease;
-  border: 1px solid transparent;
-  border-bottom: 2px solid transparent;
-  opacity: 0;
-}
-
-.faq .open .accordionItemContent p {
-  padding: 20px;
-  background-color: #fff;
-  border: 1px solid transparent;
-  border-bottom: 2px solid var(--border-secondary);
-  width: 100%;
-  margin: 0px 0px 10px 0px;
-  display: block;
-  -webkit-transform-origin: top;
-  -o-transform-origin: top;
-  -ms-transform-origin: top;
-  transform-origin: top;
-  box-sizing: border-box;
-  transition: .5s ease;
-  opacity: 1;
-  height: max-content;
-}
-
-.faq .open .accordionItemContent p {
+.faq .accordionItemContent p {
   color: #033D5A;
   font-family: Helvetica;
   font-size: var(--para-sm);
@@ -1216,12 +1200,40 @@ body {
   line-height: 180%;
 }
 
+.faq .close .accordionItemContent p {
+  height: 0;
+}
+
+.faq .open .accordionItemContent p {
+  width: 80%;
+}
+
+.faq .close .accordionItemContent {
+  height: 0;
+  opacity: 0;
+  float: left;
+  display: block;
+  background-color: #fff;
+  transition: .2s ease;
+  padding: 0px;
+  margin: 0px;
+}
+
+.faq .open .accordionItemContent {
+  padding-top: 24px;
+  padding-bottom: 32px;
+  background-color: #fff;
+  border-bottom: 2px solid var(--border-secondary);
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  height: max-content;
+  opacity: 1;
+  transition: .2s ease;
+}
+
 .faq .open .acc-head {
   margin: 0px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
   background-color: transparent;
   border: 2px solid transparent;
 
@@ -1838,6 +1850,101 @@ body {
   .about .container .left h4 {
     font-size: 20px;
   }
+
+  button:focus,
+  button:active {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+
+  .faq .accordionItem.close:focus,
+  .faq .accordionItem.close:active,
+  .faq .accordionItem.open:focus,
+  .faq .accordionItem.open:active {
+    outline: none;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  :root {
+    --h2: 26px;
+  }
+
+  .about .container::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 80%;
+    background: linear-gradient(to bottom, #4dacef, rgba(77, 172, 239, 0));
+    border-top-left-radius: 100%;
+  }
+
+  .footer .container .bottom .left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 50%;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero .right .rightImage {
+    width: 370px;
+    height: 500px;
+    object-fit: contain;
+    position: absolute;
+    bottom: -75px;
+    right: 0;
+    z-index: 100;
+  }
+
+  .footerLogo {
+    margin-bottom: -30px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #location .box .text {
+    display: none;
+  }
+
+  .faq .container .left {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .faq .container {
+    padding: var(--nav-container);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .faq .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .fecility-sec .bottom {
+    gap: 30px;
+  }
+
+  .faq .faqImage {
+    margin-bottom: 40px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2026,85 +2133,6 @@ body {
     border-radius: 50%;
     transform: rotate(126deg);
     z-index: -1;
-  }
-}
-
-@media screen and (max-width: 840px) {
-  :root {
-    --h2: 26px;
-  }
-
-  .about .container::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 50%;
-    height: 80%;
-    background: linear-gradient(to bottom, #4dacef, rgba(77, 172, 239, 0));
-    border-top-left-radius: 100%;
-  }
-
-  .footer .container .bottom .left {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    width: 50%;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .hero .right .rightImage {
-    width: 370px;
-    height: 500px;
-    object-fit: contain;
-    position: absolute;
-    bottom: -75px;
-    right: 0;
-    z-index: 100;
-  }
-
-  .footerLogo {
-    margin-bottom: -30px;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  #location .box .text {
-    display: none;
-  }
-
-  .faq .container .left {
-    width: 100%;
-    min-height: 500px;
-  }
-
-  .faq .container {
-    padding: var(--nav-container);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    flex-direction: column;
-  }
-
-  .faq .right {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    gap: 30px;
-  }
-
-  .fecility-sec .bottom {
-    gap: 30px;
-  }
-
-  .faq .faqImage {
-    margin-bottom: 40px;
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
   }
 }
 
