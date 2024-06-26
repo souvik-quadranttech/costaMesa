@@ -174,7 +174,6 @@ body {
   z-index: 10;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
 }
 
 .hero .personBg {
@@ -307,6 +306,7 @@ body {
 }
 
 .hero .btn-light {
+  font-family: var(--hel);
   font-size: var(--para-sm);
   font-weight: 700;
   color: var(--dark);
@@ -1855,8 +1855,7 @@ body {
     justify-content: flex-end;
   }
 
-  .navbar .container .col-6 img {
-    width: 100%;
+  .navbar .container .left img {
     width: 100%;
   }
 
@@ -1864,8 +1863,9 @@ body {
     width: 75%;
     display: flex;
     justify-content: flex-end;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-end;
+    gap: 20px;
   }
 
   .navbar .container .col-6 .location {
@@ -1909,6 +1909,7 @@ body {
   .hero .right .rightImage {
     width: 100%;
     position: static;
+    height: 100%;
   }
 
   .fecility-sec .bottom {
@@ -2016,12 +2017,80 @@ body {
     height: 50%;
     position: absolute;
     top: 0;
-    right: 5%;
+    right: 10%;
     background-color: #835feb;
     filter: blur(140px);
     border-radius: 50%;
     transform: rotate(126deg);
     z-index: -1;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  :root {
+    --h2: 26px;
+  }
+
+  .footer .container .bottom .left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 50%;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .hero .right .rightImage {
+    width: 370px;
+    height: 500px;
+    object-fit: contain;
+    position: absolute;
+    bottom: -75px;
+    right: 0;
+    z-index: 100;
+  }
+
+  .footerLogo {
+    margin-bottom: -30px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  #location .box .text {
+    display: none;
+  }
+
+  .faq .container .left {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  .faq .container {
+    padding: var(--nav-container);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-direction: column;
+  }
+
+  .faq .right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .fecility-sec .bottom {
+    gap: 30px;
+  }
+
+  .faq .faqImage {
+    margin-bottom: 40px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -2031,7 +2100,7 @@ body {
     --nav-container: 0 8%;
     --container: 0 10%;
     --col-6: 100%;
-    --h2: 22px;
+    --h2: 30px;
     --head: 28px;
     --para: 14px;
     --para-sm: 14px;
@@ -2040,6 +2109,39 @@ body {
 
   #location .details {
     margin-bottom: 10px;
+  }
+
+  .hero {
+    height: 100%;
+  }
+
+  .hero .right {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero .container {
+    padding: var(--container);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 180px;
+  }
+
+  .hero .right .rightImage {
+    width: 80%;
+    height: 80%;
+    position: static;
+    margin-bottom: -50px;
   }
 
   .fecility-sec .container .top .left .facility {
@@ -2131,9 +2233,67 @@ body {
     width: 50%;
     gap: 20px;
   }
+
+  .about .container .left .btn-grp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .faq .faqImage {
+    margin-bottom: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 @media screen and (max-width: 480px) {
+  :root {
+    --nav-container: 0 8%;
+    --container: 0 10%;
+    --col-6: 100%;
+    --h2: 26px;
+    --head: 28px;
+    --para: 14px;
+    --para-sm: 14px;
+    --section: 60px;
+  }
+
+  .navbar .container .col-6 .location {
+    width: 100%;
+  }
+
+  .navbar .container .col-6 {
+    width: 50%;
+  }
+
+  .navbar .container .col-6:last-child {
+    width: 50%;
+  }
+
+  .navbar .container .col-6 .location {
+    display: none;
+  }
+
+  .navbar {
+    margin-top: 0px;
+  }
+
+  .hero .container {
+    padding: var(--container);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 120px;
+  }
+
   .faq .right {
     display: flex;
     flex-direction: column;
@@ -2144,6 +2304,12 @@ body {
 
   #location .box {
     display: none;
+  }
+
+  .fecility-sec .container .top .left .facility {
+    width: 100%;
+    height: 80%;
+    object-fit: contain;
   }
 
   #location .container .btn-blue {
@@ -2193,6 +2359,7 @@ body {
 
   .hospital .container .para {
     font-size: var(--para);
+    text-wrap: nowrap;
   }
 
   .whyUs .container .card .card-body .para {
@@ -2207,8 +2374,40 @@ body {
   .footer .container .top h6 {
     width: 100%;
   }
-  .footerLogo{
+
+  .footerLogo {
     margin-bottom: 0;
   }
 
+  .fecility-sec .right h2 {
+    color: #033d5a;
+    font-size: var(--head);
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+
+  :root {
+    --nav-container: 0 8%;
+    --container: 0 10%;
+    --col-6: 100%;
+    --h2: 25px;
+    --head: 28px;
+    --para: 14px;
+    --para-sm: 14px;
+    --section: 60px;
+  }
+
+  .hero .container {
+    margin-top: 100px;
+  }
+
+  .navbar .container .col-6 .number .callBtn {
+    font-size: 18px;
+  }
 }
