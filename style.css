@@ -559,10 +559,11 @@ body.modal-open {
 
 .hero .left .para-sm {
   font-size: var(--para-sm);
+  font-family: var(--hel-light);
   color: #fff;
   width: 60%;
   margin-bottom: 60px;
-  font-weight: 400;
+  font-weight: 200;
   line-height: 180%;
 }
 
@@ -676,7 +677,7 @@ body.modal-open {
   font-size: var(--para);
   font-weight: 400;
   line-height: 170%;
-  width: 80%;
+  width: 72%;
   margin-bottom: 40px;
 }
 
@@ -705,17 +706,22 @@ body.modal-open {
 .fecility-sec .bottom .tech-card .card-icon {
   height: 54px;
   width: 54px;
-  margin-bottom: 18px;
 }
 
 .hexagon:hover #hexagon #outer {
-  animation: hexagon .5s ease-in-out;
+  animation: hexagon .5s linear;
   transform-origin: center;
   transform-box: fill-box;
 }
 
 .hexagon:hover #hexagon #lines {
-  animation: lines 1s ease-in-out;
+  animation: lines 1s linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.hexagon:hover #hexagon #circles {
+  animation: lines 1s linear;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -738,7 +744,7 @@ body.modal-open {
 }
 
 .heart:hover #heart #plus {
-  animation: hexagon .5s ease-in-out;
+  animation: rotate .5s linear;
   transform-origin: center;
   transform-box: fill-box;
 }
@@ -750,7 +756,7 @@ body.modal-open {
 }
 
 /* animations */
-@keyframes hexagon {
+@keyframes rotate {
   100% {
     transform: rotate(178deg);
   }
@@ -771,7 +777,7 @@ body.modal-open {
 }
 
 .clock:hover #clock #hand {
-  animation: hexagon .5s linear;
+  animation: rotate .5s linear;
   transform-origin: center bottom;
   transform-box: fill-box;
 }
@@ -783,7 +789,7 @@ body.modal-open {
 }
 
 /* animations */
-@keyframes hexagon {
+@keyframes rotate {
   100% {
     transform: rotate(360deg);
   }
@@ -806,6 +812,7 @@ body.modal-open {
 .fecility-sec .bottom .tech-card .card-body {
   padding-top: 16px;
   position: relative;
+  margin-top: 18px;
 }
 
 .fecility-sec .bottom .tech-card .card-body::before {
@@ -915,7 +922,7 @@ body.modal-open {
   position: relative;
   display: flex;
   width: 100%;
-  animation: marquee1 infinite 5000s linear;
+  animation: marquee1 infinite 10000s linear;
   justify-content: space-between;
 }
 
@@ -1047,9 +1054,7 @@ body.modal-open {
   right: 0;
   width: 50%;
   height: 100%;
-  background: linear-gradient(to bottom,
-      #4dacef,
-      rgba(77, 172, 239, 0));
+  background: linear-gradient(to bottom, #4dacef47, rgba(77, 172, 239, 0));
   border-top-left-radius: 100%;
 }
 
@@ -1071,7 +1076,7 @@ body.modal-open {
 }
 
 .about .container .right img {
-  width: 400px;
+  width: 544px;
   height: 100%;
   object-fit: scale-down;
 }
@@ -1098,7 +1103,7 @@ body.modal-open {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 80px;
+  gap: 70px;
   align-items: center;
   margin-bottom: 50px;
 }
@@ -1107,7 +1112,7 @@ body.modal-open {
   list-style-type: none;
   margin-bottom: 24px;
   position: relative;
-  margin-left: 20px;
+  margin-left: 34px;
 }
 
 .about .container .left .about-list li::before {
@@ -1131,7 +1136,7 @@ body.modal-open {
   font-size: 26px;
   font-weight: 400;
   line-height: 140%;
-  width: 80%;
+  width: 60%;
   margin-bottom: 35px;
 }
 
@@ -1273,7 +1278,7 @@ body.modal-open {
   line-height: 140%;
   /* 50.4px */
   margin-bottom: 16px;
-  width: 80%;
+  width: 70%;
   text-align: left;
 }
 
@@ -1282,6 +1287,7 @@ body.modal-open {
   font-size: var(--para);
   font-weight: 400;
   line-height: 180%;
+  width: 72%;
 }
 
 #location {
@@ -1857,6 +1863,19 @@ body.modal-open {
 }
 
 @media screen and (max-width: 1600px) {
+
+  :root {
+    --nav-container: 0 10%;
+    --container: 0 15%;
+    --col-6: 50%;
+    --h2: 38px;
+    --head: 40px;
+    --para: 16px;
+    --para-sm: 16px;
+    --section: 80px;
+    --gap: 60px;
+  }
+
   .about .container .left h2 {
     width: 85%;
   }
@@ -1896,6 +1915,10 @@ body.modal-open {
     height: 50%;
     object-fit: cover;
   }
+
+  .hero .container .herohead {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -1904,7 +1927,7 @@ body.modal-open {
     --nav-container: 0 8%;
     --container: 0 10%;
     --col-6: 50%;
-    --h2: 44px;
+    --h2: 40px;
     --head: 40px;
     --para: 16px;
     --para-sm: 16px;
