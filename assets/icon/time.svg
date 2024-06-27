@@ -1,9 +1,11 @@
 <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.5 49.5H29.25C40.4339 49.5 49.5 40.4339 49.5 29.25C49.5 18.0662 40.4339 9 29.25 9C18.8268 9 10.1192 16.8751 9 27" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round"/>
-<path d="M41.625 12.375L43.875 10.125M12.375 10.125L14.625 12.375" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M37.125 20.25L30.5116 26.8634M30.5116 26.8634C29.9007 26.2528 29.057 25.875 28.125 25.875C26.2611 25.875 24.75 27.3861 24.75 29.25C24.75 31.1139 26.2611 32.625 28.125 32.625C29.9889 32.625 31.5 31.1139 31.5 29.25C31.5 28.318 31.1222 27.4743 30.5116 26.8634Z" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round"/>
-<path d="M28.125 7.875V4.5" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.625 4.5H32.625" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.5 33.75H11.25" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.5 42.75H15.75" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="time">
+<path id="Vector" d="M4.5 49.5H29.25C40.4339 49.5 49.5 40.4339 49.5 29.25C49.5 18.0662 40.4339 9 29.25 9C18.8268 9 10.1192 16.8751 9 27" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round"/>
+<path id="Vector_2" d="M41.625 12.375L43.875 10.125M12.375 10.125L14.625 12.375" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="hand" d="M37.125 20.25L30.5116 26.8634M30.5116 26.8634C29.9007 26.2528 29.057 25.875 28.125 25.875C26.2611 25.875 24.75 27.3861 24.75 29.25C24.75 31.1139 26.2611 32.625 28.125 32.625C29.9889 32.625 31.5 31.1139 31.5 29.25C31.5 28.318 31.1222 27.4743 30.5116 26.8634Z" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round"/>
+<path id="Vector_3" d="M28.125 7.875V4.5" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M23.625 4.5H32.625" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M4.5 33.75H11.25" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M4.5 42.75H15.75" stroke="#033D5A" stroke-width="1.55" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
 </svg>
